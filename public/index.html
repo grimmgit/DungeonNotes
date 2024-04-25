@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DungeonNotes</title>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var socket = io();
+    var textarea = document.getElementById('note-editor');
+
+    textarea.addEventListener('input', function() {
+      // Emit changes to the server
+      socket.emit('edit-note', textarea.value);
+    });
+
+    socket.on('update-note', function(data) {
+      // Update content with data from other users
+      textarea.value = data;
+    });
+  });
+</script>
+</head>
+<body>
+<textarea id="note-editor" rows="10" cols="50"></textarea>
+</body>
+</html>

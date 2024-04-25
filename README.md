@@ -1,14 +1,10 @@
 # DungeonNotes
 
-A simple real-time collaborative text editor using Node.js and Socket.IO.
-
-## Description
-
-This project demonstrates a basic real-time collaborative text editor. Users can simultaneously edit text in a browser and see each other's changes in real-time.
+A real-time collaborative text editor designed for planning and noting details during dungeon crawls or similar tabletop RPG sessions.
 
 ## Installation
 
-To run this project locally:
+To run DungeonNotes locally:
 
 ```bash
 git clone https://github.com/grimmgit/DungeonNotes.git
